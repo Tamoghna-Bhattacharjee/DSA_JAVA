@@ -1,11 +1,8 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        float f = ((float)1)/3;
-
-        double ff = 1.0/3;
-        System.out.println(f + " " + ff);
+    public static void main(String[] args) throws Exception {
+        ArrayList<Integer> arr = new ArrayList<>();
+        
     }
 }
