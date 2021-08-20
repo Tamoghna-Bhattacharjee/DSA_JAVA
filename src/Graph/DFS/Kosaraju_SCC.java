@@ -26,6 +26,7 @@ public class Kosaraju_SCC {
             }
         }
     }
+
     static void dfs1(int u) {
         visit[u] = true;
         for (int v: g[u]) {
