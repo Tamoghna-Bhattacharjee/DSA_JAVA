@@ -3,6 +3,8 @@ package String_algo.DP;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1
+
 public class Cnt_Palindromic_Subsequence {
     static long MOD = 1000000007;
     static long[][] dp;
