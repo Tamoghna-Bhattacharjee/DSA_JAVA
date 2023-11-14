@@ -5,6 +5,12 @@ import java.util.Scanner;
 
 // https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1
 
+/* Transition:
+    if s[L] == s[R]: dp(L,R) = dp(L+1, R) + dp(L, R-1) - dp(L+1,R-1) + 1 + dp(L+1, R-1)
+    else dp(L,R) = dp(L+1, R) + dp(L, R-1) - dp(L+1,R-1)
+
+*/
+
 public class Cnt_Palindromic_Subsequence {
     static long MOD = 1000000007;
     static long[][] dp;
