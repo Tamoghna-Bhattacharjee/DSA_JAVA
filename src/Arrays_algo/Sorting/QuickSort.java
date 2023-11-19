@@ -15,22 +15,23 @@ public class QuickSort {
     }
 
     public static void quickSort(int L, int R) {
-        if (R-L+1 <= 1) return;
+        if (L >= R) return;
         int p = getPivot(L, R);
-        quickSort(L, p-1);
+        quickSort(L,p-1);
         quickSort(p+1, R);
     }
 
     public static int getPivot(int L, int R) {
-        int pv = arr[L];
-        int i = L, j = R;
-        while (i < j) {
-            while (arr[i] <= pv) i++;
-            while (arr[j] > pv) j--;
-            if (i < j) swap(i,j);
+        int pv = arr[R];
+        int idx = L;
+        for (int i = L; i < R; i++) {
+            if (arr[i] <= pv) {
+                swap(idx, i);
+                idx++;
+            }
         }
-        swap(j,L);
-        return j;
+        swap(R, idx);
+        return idx;
     }
     public static void swap(int i, int j) {
         if (i != j) {
